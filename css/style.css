@@ -1,0 +1,245 @@
+@charset "UTF-8";
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px; }
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer; }
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25em;
+  height: 1.25em;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px; }
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: .2em;
+  left: .275em;
+  font-size: 1.4em;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all .2s;
+  font-family: Helvetica, Arial, sans-serif; }
+
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0); }
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1); }
+
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd; }
+
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999; }
+
+[type="checkbox"]:disabled + label {
+  color: #aaa; }
+
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted blue; }
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #4778d9 !important; }
+
+body {
+  font: 14px Helvetica, sans-serif;
+  color: #7e7e7e;
+  background-color: #fafafa; }
+
+.credit_page {
+  margin: 40px 0; }
+
+.page_title_wrap {
+  overflow: hidden;
+  color: #484848; }
+  .page_title_wrap .page_title {
+    margin: 0;
+    padding: 0;
+    font-size: 20px; }
+    .page_title_wrap .page_title .badge_text {
+      color: #7e7e7e;
+      font-size: 14px;
+      margin: 5px 0px; }
+    .page_title_wrap .page_title span {
+      float: left; }
+    .page_title_wrap .page_title .credit_badge {
+      background-color: #d23859;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      border-radius: 15px;
+      font-weight: normal;
+      line-height: 20px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      text-align: center;
+      padding: 0;
+      margin: 2px 5px 0px 25px; }
+
+.credit_progress {
+  border: 1px solid #ccc;
+  background: #fff; }
+
+.progress_curr {
+  color: #44820D;
+  font-weight: bold; }
+
+.credit_form_wrap {
+  background-color: #f1f1f1;
+  margin: 20px 0; }
+  .credit_form_wrap .credit_form {
+    padding: 10px; }
+    .credit_form_wrap .credit_form .dropdown_label {
+      float: left;
+      margin: 10px 18px; }
+    .credit_form_wrap .credit_form .dropdown .btn {
+      background: white;
+      color: #7e7e7e;
+      border: 1px solid #7e7e7e75;
+      font-size: 14px;
+      width: 55%;
+      text-align: left; }
+    .credit_form_wrap .credit_form .dropdown .btn::after {
+      float: right;
+      margin: 8px 0px; }
+    .credit_form_wrap .credit_form .sep {
+      height: 30px;
+      display: block;
+      background: #ccc;
+      text-indent: -999px;
+      width: 1px;
+      margin-top: 4px; }
+    .credit_form_wrap .credit_form .checkboxes_wrap {
+      margin: 10px 0; }
+      .credit_form_wrap .credit_form .checkboxes_wrap .credit_label {
+        margin: 0 20px 0 0;
+        float: left; }
+      .credit_form_wrap .credit_form .checkboxes_wrap .credit_type .form-check-label {
+        margin: 0 10px 0 5px; }
+
+.year_wrap .col_head {
+  padding: 10px; }
+  .year_wrap .col_head p {
+    margin-bottom: 0; }
+  .year_wrap .col_head h3 {
+    color: #484848;
+    font-size: 18px; }
+.year_wrap .available_slot_wrap {
+  border: 1px dashed #ccc;
+  padding: 15px 10px 0;
+  margin: 10px 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fff; }
+.year_wrap .sel_subject_wrap {
+  border: 1px solid #ccc;
+  overflow: hidden;
+  padding: 7px 10px 7px 20px;
+  margin: 10px 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background: linear-gradient(to left, #fff 97%, #82C31F 50%);
+  height: 48px; }
+  .year_wrap .sel_subject_wrap div {
+    float: left; }
+  .year_wrap .sel_subject_wrap p {
+    margin: 0; }
+  .year_wrap .sel_subject_wrap .credit_details {
+    float: right; }
+    .year_wrap .sel_subject_wrap .credit_details p {
+      text-align: right; }
+    .year_wrap .sel_subject_wrap .credit_details .credit_info button.btn.btn-secondary {
+      height: 20px;
+      width: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      border-radius: 10px;
+      padding: 0;
+      background-color: #FF446C !important; }
+.year_wrap .add_subjects_wrap {
+  border: 1px solid #ccc;
+  overflow: hidden;
+  margin: 10px 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  height: 48px;
+  background: #fff; }
+  .year_wrap .add_subjects_wrap .add_sub_details {
+    padding: 7px 10px 7px 10px; }
+    .year_wrap .add_subjects_wrap .add_sub_details p {
+      margin: 0; }
+  .year_wrap .add_subjects_wrap .add {
+    background: #26AFDF;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 8px; }
+.year_wrap .highlight {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc; }
+  .year_wrap .highlight .col_head {
+    background: #F1F1F1;
+    padding: 10px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -ms-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px; }
+  .year_wrap .highlight .available_slot_wrap,
+  .year_wrap .highlight .sel_subject_wrap,
+  .year_wrap .highlight .add_subjects_wrap {
+    margin: 10px 10px; }
+  .year_wrap .highlight .submit_wrap {
+    -webkit-border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -ms-border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 5px 5px;
+    background: #26AFDF;
+    padding: 20px;
+    text-align: center; }
+    .year_wrap .highlight .submit_wrap button {
+      background: #027BAF;
+      border: 1px solid #027BAF;
+      box-shadow: inset 0px 0px 1px 1px #26AFDF;
+      padding: 10px 15px; }
+
+/*# sourceMappingURL=style.css.map */

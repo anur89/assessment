@@ -1,0 +1,197 @@
+@import 'customCheckbox';
+$font-stack: Helvetica, sans-serif;
+$primary-color: #7e7e7e;
+$secondary-color:#484848;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+body{
+  font: 14px $font-stack;
+  color: $primary-color;
+  background-color:#fafafa;
+}
+.credit_page{
+	margin: 40px 0;
+}
+.page_title_wrap{
+	overflow:hidden;
+	color: $secondary-color;
+	.page_title{
+	  margin:0;
+	  padding:0;
+	  font-size: 20px;
+	  .badge_text{
+	  	color:$primary-color;
+	  	    font-size: 14px;
+    		margin: 5px 0px;
+	  }
+	  span{
+	  	float:left;
+	  }
+	  .credit_badge{
+	  	background-color:#d23859;
+	  	@include border-radius(15px);
+	    font-weight: normal;
+	    line-height: 20px;
+	    display: block;
+	    width: 20px;
+	    height: 20px;
+	    font-size: 12px;
+	    text-align: center;
+	    padding: 0;
+	    margin: 2px 5px 0px 25px;
+	  }
+	}
+}
+.credit_progress{
+	border: 1px solid #ccc;
+    background: #fff;
+}
+.progress_curr{
+	color: #44820D;
+    font-weight: bold;
+}
+.credit_form_wrap{
+	background-color:#f1f1f1;
+	margin:20px 0;
+	.credit_form{
+		padding: 10px;
+		.dropdown_label {
+		    float: left;
+		    margin: 10px 18px;
+		}
+		.dropdown{
+			.btn{
+				background: white;
+    			color: #7e7e7e;
+    			border: 1px solid #7e7e7e75;
+    			font-size: 14px;
+     			width: 55%;
+    			text-align: left;
+			}
+			.btn::after{
+				float: right;
+    			margin: 8px 0px;
+			}
+		}
+		.sep{
+			height: 30px;
+		    display: block;
+		    background: #ccc;
+		    text-indent: -999px;
+		    width: 1px;
+		    margin-top: 4px;
+		}
+		.checkboxes_wrap{
+			margin:10px 0;
+			.credit_label{
+				margin: 0 20px 0 0;
+				float: left;
+			}
+			.credit_type{
+				.form-check-label {
+				    margin: 0 10px 0 5px;
+				}
+			}
+		}
+	}
+}
+.year_wrap{
+	.col_head{
+		padding: 10px;
+		p{
+			margin-bottom:0;
+		}
+		h3{
+			color:$secondary-color;
+			font-size: 18px;
+		}
+	}
+	.available_slot_wrap{
+		border: 1px dashed #ccc;
+    	padding: 15px 10px 0;
+    	margin: 10px 0;
+    	@include border-radius(5px);
+    	background-color:#fff;
+	}
+	.sel_subject_wrap {
+	    border: 1px solid #ccc;
+	    overflow: hidden;
+	    padding: 7px 10px 7px 20px;
+	    margin: 10px 0;
+	    @include border-radius(5px);
+	    background: linear-gradient(to left, #fff 97%, #82C31F 50%);
+	    height: 48px;
+	    div{
+	    	float:left;
+	    }
+	    p{
+	    	margin:0;
+	    }
+	    .credit_details{
+	    	float:right;
+	    	p{
+	    		text-align: right;
+	    	}
+	    	.credit_info button.btn.btn-secondary {
+			    height: 20px;
+			    width: 20px;
+			    @include border-radius(10px);
+			    padding: 0;
+			    background-color: #FF446C!important;
+			}
+	    }
+	}
+	.add_subjects_wrap{
+		border: 1px solid #ccc;
+	    overflow: hidden;
+	    margin: 10px 0;
+	    @include border-radius(5px);
+	    height: 48px;
+	    background: #fff;
+	    .add_sub_details {	    
+	    	padding: 7px 10px 7px 10px;
+	    	p{
+	    		margin:0;
+	    	}
+	    }
+		.add{
+			background: #26AFDF;
+		    color: #fff;
+		    font-size: 30px;
+		    text-align: center;
+		    padding-top: 5px;
+		    padding-bottom: 8px;
+		}
+	}
+	.highlight{
+		@include border-radius(5px);
+		border: 1px solid #ccc;
+		.col_head{
+		    background: #F1F1F1;
+    		padding: 10px;
+    		@include border-radius(5px 5px 0px 0px);
+		}
+		.available_slot_wrap,
+		.sel_subject_wrap,
+		.add_subjects_wrap{
+			margin: 10px 10px;
+		}
+		.submit_wrap{
+			@include border-radius(0px 0px 5px 5px);
+			background: #26AFDF;
+    		padding: 20px;
+    		text-align: center;
+    		button{
+    			background: #027BAF;
+			    border: 1px solid #027BAF;
+			    box-shadow: inset 0px 0px 1px 1px #26AFDF;
+			    padding: 10px 15px;
+    		}
+		}
+	}
+}
